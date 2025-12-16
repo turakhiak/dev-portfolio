@@ -4,8 +4,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Academic Portfolio of Dev - Aspiring Chemical Engineer & Student Researcher">
-  <title>Dev | Academic Portfolio</title>
+  <meta name="description"
+    content="Dev Turakhia - Aspiring Chemical Engineer & Student Researcher. A-Level student with research experience in polymer degradation, MOFs, and electrochemistry. National-level tennis player.">
+  <meta name="author" content="Dev Turakhia">
+  <meta name="keywords"
+    content="Dev Turakhia, Chemical Engineering, Student Research, Chemistry, Tennis, Academic Portfolio">
+
+  <!-- Open Graph / Social Media -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Dev Turakhia | Academic Portfolio">
+  <meta property="og:description"
+    content="Aspiring Chemical Engineer combining research excellence with athletic discipline. Explore my journey in chemistry, tennis, and leadership.">
+  <meta property="og:url" content="https://devturakhia.com">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Dev Turakhia | Academic Portfolio">
+  <meta name="twitter:description"
+    content="Aspiring Chemical Engineer combining research excellence with athletic discipline.">
+
+  <title>Dev Turakhia | Academic Portfolio</title>
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,14 +34,43 @@
 </head>
 
 <body>
+  <!-- Preloader -->
+  <div class="preloader">
+    <div class="preloader-content">
+      <div class="atom-loader">
+        <div class="atom-nucleus-loader"></div>
+        <div class="atom-orbit"></div>
+        <div class="atom-orbit orbit-2"></div>
+        <div class="atom-orbit orbit-3"></div>
+      </div>
+      <p class="preloader-text">Dev Turakhia</p>
+    </div>
+  </div>
+
+  <!-- Research Project Modal -->
+  <div class="modal-overlay" id="projectModal">
+    <div class="modal-content">
+      <button class="modal-close" aria-label="Close modal">&times;</button>
+      <div class="modal-header">
+        <span class="modal-status"></span>
+        <h2 class="modal-title"></h2>
+        <span class="modal-type"></span>
+      </div>
+      <div class="modal-body">
+        <p class="modal-summary"></p>
+        <div class="modal-sections"></div>
+      </div>
+    </div>
+  </div>
+
   <nav class="navbar">
     <div class="container">
-      <a href="#" class="logo">Dev.</a>
+      <a href="#" class="logo">Dev Turakhia</a>
       <ul class="nav-links">
         <li><a href="#about">About</a></li>
         <li><a href="#research">Research</a></li>
         <li><a href="#academics">Academics</a></li>
-        <li><a href="#beyond">Beyond the Lab</a></li>
+        <li><a href="#tennis">Athletics</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </div>
@@ -31,110 +79,252 @@
   <header class="hero">
     <div class="container hero-content">
       <div class="hero-text">
-        <h1>Dev</h1>
-        <h2>Aspiring Chemical Engineer & Student Researcher</h2>
-        <p class="hero-intro">Applying scientific principles to solve real-world challenges with discipline and
-          curiosity.</p>
-        <a href="#research" class="btn btn-primary">View Research</a>
+        <div class="hero-badge">Student Researcher & Athlete</div>
+        <h1>Bridging <span class="text-gradient">Molecules</span> & <span class="text-gradient">Match Points</span></h1>
+        <p class="hero-intro">Applying the discipline of competitive tennis to the rigors of chemical engineering. I
+          solve problems—whether on the court or in the lab.</p>
+        <div class="hero-cta">
+          <a href="#research" class="btn btn-primary">View Research</a>
+          <a href="#tennis" class="btn btn-outline">View Athletics</a>
+        </div>
       </div>
-      <div class="hero-image">
-        <!-- Placeholder for professional photo -->
-        <div class="image-placeholder">Dev's Photo</div>
+      <div class="hero-visual">
+        <div class="orbit-container">
+          <div class="visual-card science-card">
+            <div class="visual-card-header">
+              <img loading="lazy" src="/assets/images/chemistry.jpg" alt="Chemistry" class="card-thumb">
+              <div class="card-info">
+                <span class="card-title">Chemistry</span>
+                <span class="card-sub">Material Science</span>
+              </div>
+            </div>
+            <div class="card-details">
+              <p>Focusing on polymer degradation and MOFs for sustainable engineering solutions.</p>
+            </div>
+          </div>
+          <div class="visual-card tennis-card">
+            <div class="visual-card-header">
+              <img loading="lazy" src="/assets/images/tennis-hero.jpg" alt="Tennis" class="card-thumb">
+              <div class="card-info">
+                <span class="card-title">Tennis</span>
+                <span class="card-sub">National Athlete</span>
+              </div>
+            </div>
+            <div class="card-details">
+              <p>Top 150 National Player (U-14/U-12). Training 20hrs/week while maintaining academic excellence.</p>
+            </div>
+          </div>
+          <div class="visual-card leadership-card">
+            <div class="visual-card-header">
+              <img loading="lazy" src="/assets/images/activities.jpg" alt="Leadership" class="card-thumb">
+              <div class="card-info">
+                <span class="card-title">Leadership</span>
+                <span class="card-sub">Student Council</span>
+              </div>
+            </div>
+            <div class="card-details">
+              <p>Mentoring junior athletes and organizing inter-school tournaments.</p>
+            </div>
+          </div>
+          <div class="visual-card impact-card">
+            <div class="visual-card-header">
+              <img loading="lazy" src="/assets/images/volunteer.jpg" alt="Impact" class="card-thumb">
+              <div class="card-info">
+                <span class="card-title">Impact</span>
+                <span class="card-sub">Social Initiative</span>
+              </div>
+            </div>
+            <div class="card-details">
+              <p>Advocating for scientific literacy through TED-Ed and local workshops.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Atom Nucleus -->
+        <div class="atom-nucleus"></div>
+
+        <!-- Orbital Rings with Electrons -->
+        <div class="orbital-ring ring-1"></div>
+        <div class="orbital-ring ring-2"></div>
+        <div class="orbital-ring ring-3"></div>
       </div>
     </div>
   </header>
 
-  <section id="about" class="section">
+  <!-- Personal Statement Section -->
+  <!-- About Me Section -->
+  <section id="about" class="section about-section">
     <div class="container">
       <h2 class="section-title">About Me</h2>
-      <div class="about-content">
-        <div class="about-text">
-          <p>
-            My journey began on the tennis court, where I reached a national ranking of top 150 and #2 in the state.
-            The discipline, resilience, and strategic thinking I developed as a competitive athlete have become the
-            foundation of my academic life.
-          </p>
-          <p>
-            Today, I channel that same intensity into the laboratory. As an aspiring Chemical Engineer, I am driven by
-            the potential of chemistry to engineer solutions for a sustainable future.
-            Whether analyzing molecular structures or leading my school as Sports Captain, I approach every challenge
-            with a commitment to excellence and a hunger for discovery.
-          </p>
+      <div class="about-header">
+        <h2 class="about-headline">Driven by Curiosity,<br>Grounded in Discipline.</h2>
+        <p class="about-bio">
+          My journey is defined by the intersection of discipline and discovery. Whether I'm synthesizing nanoparticles,
+          competing at the national tennis level, or connecting with residents at an old age home, I bring the same
+          level
+          of focus and heart. I believe that true innovation happens when rigorous science meets human empathy.
+        </p>
+      </div>
+
+      <div class="values-grid">
+        <!-- Value 1 -->
+        <div class="value-card">
+          <div class="value-icon">🌊</div>
+          <h3>Adaptability</h3>
+          <p>Turning setbacks into breakthroughs—in the lab and on the court.</p>
+        </div>
+
+        <!-- Value 2 -->
+        <div class="value-card">
+          <div class="value-icon">🔬</div>
+          <h3>Rigor</h3>
+          <p>Precision in research, resilience in competition, and excellence in execution.</p>
+        </div>
+
+        <!-- Value 3 -->
+        <div class="value-card">
+          <div class="value-icon">🤝</div>
+          <h3>Connection</h3>
+          <p>Using my voice and energy to uplift others and build meaningful bridges.</p>
         </div>
       </div>
     </div>
   </section>
 
   <section id="research" class="section bg-light">
+    <!-- Molecular Particles Background -->
+    <div class="particles-container"></div>
+
     <div class="container">
-      <h2 class="section-title">Research & Inquiry</h2>
-      <p class="section-subtitle">Engaging with complex chemical problems through rigorous methodology.</p>
+      <h2 class="section-title">Research &amp; Internships</h2>
+      <p class="section-subtitle">Transforming waste into innovation through rigorous chemical methodology.</p>
+
+      <div class="learnings-legend">
+        <span class="legend-label">Focus Areas:</span>
+        <div class="legend-tags">
+          <span class="legend-tag innovation">Innovation</span>
+          <span class="legend-tag technical">Technical</span>
+          <span class="legend-tag business">Business</span>
+          <span class="legend-tag industry">Industry</span>
+          <span class="legend-tag practical">Practical</span>
+        </div>
+      </div>
 
       <div class="research-grid">
-        <!-- Project 1 -->
-        <article class="research-card">
-          <h3>Investigation into Polymer Degradation Rates</h3>
-          <div class="research-details">
-            <div class="research-part">
-              <h4>Research Question</h4>
-              <p>How does pH variation affect the degradation rate of biodegradable polylactic acid (PLA) films?</p>
+
+        <!-- Card 1: Silver Nanoparticles -->
+        <article class="research-card-compact">
+          <div class="research-status ongoing">Ongoing</div>
+          <div class="research-icon">⚗️</div>
+          <div class="research-type project">Research Project</div>
+          <h3>Silver Nanoparticles from Firework Waste</h3>
+          <p class="research-summary">Converting explosive waste into functional nanomaterials for catalysis</p>
+          <div class="research-expanded">
+            <div class="key-learnings">
+              <h4>Key Learnings</h4>
+              <ul class="learning-list">
+                <li class="learning-item innovation">Circular economy thinking can transform waste into value</li>
+                <li class="learning-item technical">Green synthesis methods are viable for hazardous material recovery
+                </li>
+                <li class="learning-item practical">Plasmonic photocatalysis has untapped potential for sustainability
+                </li>
+              </ul>
             </div>
-            <div class="research-part">
-              <h4>Methodology</h4>
-              <p>Synthesized PLA films and subjected them to controlled hydrolysis in buffer solutions ranging from pH 4
-                to 10 over a 4-week period. Measured mass loss and tensile strength changes.</p>
+            <div class="research-detail">
+              <h4>Impact</h4>
+              <p>This theoretically unexplored pathway bridges hazardous waste management and advanced materials
+                science, demonstrating how creative chemistry can address environmental challenges.</p>
             </div>
-            <div class="research-part">
-              <h4>Key Results</h4>
-              <p>Demonstrated that alkaline environments significantly accelerate hydrolysis, suggesting optimal
-                composting conditions for PLA waste management.</p>
+            <div class="research-placeholder">
+              <p class="placeholder-text">Detailed methodology and results to be added...</p>
             </div>
           </div>
         </article>
 
-        <!-- Project 2 -->
-        <article class="research-card">
-          <h3>Synthesis of Metal-Organic Frameworks (MOFs)</h3>
-          <div class="research-details">
-            <div class="research-part">
-              <h4>Research Question</h4>
-              <p>Can solvothermal synthesis be optimized to increase the surface area of Copper-based MOFs for carbon
-                capture?</p>
+        <!-- Card 2: Beverages Internship -->
+        <article class="research-card-compact">
+          <div class="research-status ongoing">Ongoing</div>
+          <div class="research-icon">🧪</div>
+          <div class="research-type internship">Live Internship</div>
+          <h3>Ingredient Research</h3>
+          <p class="research-summary">Food science applications in non-alcoholic beverages formulation</p>
+          <div class="research-expanded">
+            <div class="key-learnings">
+              <h4>Key Learnings</h4>
+              <ul class="learning-list">
+                <li class="learning-item industry">Chemistry principles translate directly to commercial products</li>
+                <li class="learning-item collaboration">Cross-functional teams require clear technical communication
+                </li>
+                <li class="learning-item documentation">Centralized knowledge systems accelerate innovation</li>
+              </ul>
             </div>
-            <div class="research-part">
-              <h4>Methodology</h4>
-              <p>Varied temperature and solvent ratios during synthesis. Characterized resulting crystals using X-ray
-                diffraction (XRD) and BET surface area analysis.</p>
+            <div class="research-detail">
+              <h4>Impact</h4>
+              <p>Building a comprehensive research wiki that consolidates scientific literature, regulatory standards,
+                and experimental findings has streamlined formulation decisions for multiple product lines.</p>
             </div>
-            <div class="research-part">
-              <h4>Key Results</h4>
-              <p>Identified a specific temperature range that maximized porosity, achieving a 15% increase in CO2
-                adsorption capacity compared to standard synthesis methods.</p>
+            <div class="research-placeholder">
+              <p class="placeholder-text">Wiki screenshots and specific ingredient case studies to be added...</p>
             </div>
           </div>
         </article>
 
-        <!-- Project 3 -->
-        <article class="research-card">
-          <h3>Electrochemical Efficiency in Water Splitting</h3>
-          <div class="research-details">
-            <div class="research-part">
-              <h4>Research Question</h4>
-              <p>What is the effect of doping nickel electrodes with iron on the overpotential of the oxygen evolution
-                reaction (OER)?</p>
+        <!-- Card 3: Market Research -->
+        <article class="research-card-compact">
+          <div class="research-status completed">Completed</div>
+          <div class="research-icon">📊</div>
+          <div class="research-type internship">Internship</div>
+          <h3>Market Research</h3>
+          <p class="research-summary">Consumer insights for new product launch strategy</p>
+          <div class="research-expanded">
+            <div class="key-learnings">
+              <h4>Key Learnings</h4>
+              <ul class="learning-list">
+                <li class="learning-item business">Data-driven insights shape successful product positioning</li>
+                <li class="learning-item communication">Translating research into recommendations requires audience
+                  awareness</li>
+                <li class="learning-item methodology">Qualitative + quantitative methods provide richer insights</li>
+              </ul>
             </div>
-            <div class="research-part">
-              <h4>Methodology</h4>
-              <p>Fabricated Ni-Fe alloy electrodes via electrodeposition. Conducted linear sweep voltammetry to measure
-                current density and overpotential.</p>
+            <div class="research-detail">
+              <h4>Impact</h4>
+              <p>Survey and interview data directly informed the client's launch strategy, demonstrating how systematic
+                inquiry applies beyond the lab to business contexts.</p>
             </div>
-            <div class="research-part">
-              <h4>Key Results</h4>
-              <p>Iron doping reduced the overpotential by 200mV at 10 mA/cm², indicating significantly improved
-                catalytic efficiency for hydrogen production.</p>
+            <div class="research-placeholder">
+              <p class="placeholder-text">Survey results and client presentation deck to be added...</p>
             </div>
           </div>
         </article>
+
+        <!-- Card 4: Hyperlocal Delivery Supply Chain -->
+        <article class="research-card-compact">
+          <div class="research-status completed">Completed</div>
+          <div class="research-icon">🚚</div>
+          <div class="research-type internship">Internship</div>
+          <h3>Supply Chain Operations</h3>
+          <p class="research-summary">Optimizing logistics for fresh and perishable goods delivery</p>
+          <div class="research-expanded">
+            <div class="key-learnings">
+              <h4>Key Learnings</h4>
+              <ul class="learning-list">
+                <li class="learning-item industry">Perishable inventory requires precise cold-chain management</li>
+                <li class="learning-item methodology">Operational bottlenecks often stem from last-mile inefficiencies
+                </li>
+                <li class="learning-item business">Speed vs. quality trade-offs define hyperlocal business models</li>
+              </ul>
+            </div>
+            <div class="research-detail">
+              <h4>Impact</h4>
+              <p>Analyzed supply chain workflows to understand strategies for minimizing spoilage and maximizing
+                delivery speed. This experience provided a ground-level view of operational complexity in high-stakes
+                logistics.</p>
+            </div>
+            <div class="research-placeholder">
+              <p class="placeholder-text">Process maps and operational analysis report to be added...</p>
+            </div>
+          </div>
+        </article>
+
       </div>
     </div>
   </section>
@@ -172,43 +362,347 @@
     </div>
   </section>
 
-  <section id="beyond" class="section bg-light">
+  <!-- Future Vision Section -->
+  <section id="vision" class="section vision-section">
     <div class="container">
-      <h2 class="section-title">Beyond the Lab</h2>
-      <div class="activities-list">
-        <div class="activity-item">
-          <div class="activity-icon">🎾</div>
-          <div class="activity-content">
-            <h3>Competitive Tennis</h3>
-            <p>Former state-level (#2) and national-level (top 150) player. While I now train primarily for discipline
-              and fitness, the grit learned on the court drives my academic persistence.</p>
+      <h2 class="section-title">Looking Ahead</h2>
+
+      <!-- Short-Term Timeline -->
+      <div class="vision-timeline-container">
+        <h3 class="vision-subtitle">Short-Term Roadmap</h3>
+        <div class="timeline">
+          <div class="timeline-line"></div>
+
+          <!-- Node 1: Now -->
+          <div class="timeline-node active">
+            <div class="node-marker">
+              <div class="pulse"></div>
+            </div>
+            <div class="node-content">
+              <span class="node-date">Current Focus</span>
+              <h4>Research &amp; Internships</h4>
+              <p>Silver nanoparticles research, beverage formulation, and supply chain analysis.</p>
+            </div>
           </div>
-        </div>
-        <div class="activity-item">
-          <div class="activity-icon">🏆</div>
-          <div class="activity-content">
-            <h3>School Sports Captain</h3>
-            <p>Leading school athletic initiatives, fostering teamwork, and mentoring junior athletes in balancing
-              sports with rigorous academics.</p>
+
+          <!-- Node 2: Upcoming -->
+          <div class="timeline-node">
+            <div class="node-marker"></div>
+            <div class="node-content">
+              <span class="node-date">Upcoming</span>
+              <h4>A-Level Exams</h4>
+              <p>Excelling in prelims and final examinations to secure academic foundation.</p>
+            </div>
           </div>
-        </div>
-        <div class="activity-item">
-          <div class="activity-icon">🎤</div>
-          <div class="activity-content">
-            <h3>TED-Ed Speaker</h3>
-            <p>Delivered a talk on [Topic Placeholder], communicating complex ideas to a diverse audience and advocating
-              for scientific literacy.</p>
+
+          <!-- Node 3: Next -->
+          <div class="timeline-node">
+            <div class="node-marker"></div>
+            <div class="node-content">
+              <span class="node-date">Next Steps</span>
+              <h4>Tennis &amp; Applications</h4>
+              <p>Competing in tournaments and finalizing university portfolio.</p>
+            </div>
           </div>
-        </div>
-        <div class="activity-item">
-          <div class="activity-icon">🌍</div>
-          <div class="activity-content">
-            <h3>HMUN Participant</h3>
-            <p>Engaged in global debate and diplomacy, honing skills in negotiation, public speaking, and critical
-              analysis of international issues.</p>
+
+          <!-- Node 4: Goal -->
+          <div class="timeline-node">
+            <div class="node-marker"></div>
+            <div class="node-content">
+              <span class="node-date">Goal</span>
+              <h4>University Admission</h4>
+              <p>Joining a world-class program to pursue Chemical Engineering.</p>
+            </div>
           </div>
         </div>
       </div>
+
+      <!-- Post-Grad Pathways -->
+      <div class="vision-pathways-container">
+        <h3 class="vision-subtitle">Future Horizons</h3>
+        <div class="pathways-diagram">
+
+          <!-- Central Node -->
+          <div class="pathway-center">
+            <div class="pathway-card main">
+              <div class="pathway-icon">🎓</div>
+              <h3>Undergraduate Degree</h3>
+              <p>Chemical Engineering</p>
+            </div>
+            <div class="pathway-lines">
+              <div class="line-left"></div>
+              <div class="line-center"></div>
+              <div class="line-right"></div>
+            </div>
+          </div>
+
+          <!-- Branches -->
+          <div class="pathway-branches">
+            <!-- Branch 1 -->
+            <div class="pathway-card branch">
+              <div class="pathway-icon">🚀</div>
+              <h3>Entrepreneurship</h3>
+              <p>Launching ventures that apply chemical engineering to real-world problems.</p>
+            </div>
+
+            <!-- Branch 2 -->
+            <div class="pathway-card branch">
+              <div class="pathway-icon">🏭</div>
+              <h3>Industry</h3>
+              <p>Petroleum engineering, environmental processes, or project management.</p>
+            </div>
+
+            <!-- Branch 3 -->
+            <div class="pathway-card branch">
+              <div class="pathway-icon">🔬</div>
+              <h3>Academia</h3>
+              <p>Pursuing a master's degree in specialized fields like Nanotechnology.</p>
+            </div>
+          </div>
+
+        </div>
+        <p class="vision-note">"What matters most is finding work that combines practical impact with continued learning
+          and growth."</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Tennis & Athletics Section -->
+  <section id="tennis" class="section tennis-section">
+    <div class="tennis-bg-parallax"></div>
+    <div class="container">
+      <div class="tennis-header">
+        <h2 class="section-title text-neon">The Scientific Athlete</h2>
+        <p class="tennis-tagline">Applying athletic discipline to chemical research.</p>
+        <p class="tennis-intro">
+          My journey in tennis mirrors my approach to chemistry: it is about the relentless optimization of variables.
+          Starting at Rank 1,646, I analyzed my game, adjusted my mechanics, and engineered a climb to India's National
+          Top 50.
+        </p>
+      </div>
+
+      <!-- Activation Energy Chart -->
+      <div class="chart-container">
+        <h3 class="chart-title">Activation Energy: The Climb</h3>
+        <div class="chart-wrapper">
+          <svg class="ranking-chart" viewBox="0 0 800 220" preserveAspectRatio="none">
+            <!-- Grid Lines -->
+            <line x1="0" y1="192" x2="800" y2="192" class="chart-grid" />
+            <line x1="0" y1="137" x2="800" y2="137" class="chart-grid" />
+            <line x1="0" y1="82" x2="800" y2="82" class="chart-grid" />
+            <line x1="0" y1="27" x2="800" y2="27" class="chart-grid" />
+
+            <!-- Age Group Vertical Markers -->
+            <line x1="200" y1="0" x2="200" y2="198" class="age-group-marker" stroke-dasharray="5,5" />
+            <line x1="500" y1="0" x2="500" y2="198" class="age-group-marker" stroke-dasharray="5,5" />
+            <line x1="650" y1="0" x2="650" y2="198" class="age-group-marker" stroke-dasharray="5,5" />
+
+            <!-- Age Group Labels -->
+            <text x="125" y="214" class="age-group-label">U-12</text>
+            <text x="350" y="214" class="age-group-label">U-14</text>
+            <text x="575" y="214" class="age-group-label">U-16</text>
+
+            <!-- Rank Axis Labels -->
+            <text x="10" y="186" class="chart-label">Rank 1600</text>
+            <text x="10" y="137" class="chart-label">Rank 400</text>
+            <text x="10" y="82" class="chart-label">Rank 100</text>
+            <text x="10" y="27" class="chart-label">Rank 1</text>
+
+            <!-- Year Labels -->
+            <text x="50" y="209" class="chart-label">2019</text>
+            <text x="750" y="209" class="chart-label">2023</text>
+
+            <!-- The Data Line -->
+            <path class="chart-line" d="M 50 186 L 150 176 L 250 110 L 450 77 L 600 44 L 750 33" />
+
+            <!-- Key Achievement Points -->
+            <circle cx="250" cy="110" r="5" class="chart-milestone" />
+            <circle cx="600" cy="44" r="5" class="chart-milestone" />
+            <circle cx="750" cy="33" r="6" class="chart-point" />
+
+            <!-- Achievement Tooltips -->
+            <g class="chart-tooltip milestone-tooltip-1">
+              <rect x="200" y="93" width="100" height="25" rx="4" />
+              <text x="250" y="106" text-anchor="middle" font-size="11">Top 150</text>
+            </g>
+
+            <g class="chart-tooltip milestone-tooltip-2">
+              <rect x="550" y="27" width="100" height="25" rx="4" />
+              <text x="600" y="40" text-anchor="middle" font-size="11">Top 100</text>
+            </g>
+
+            <g class="chart-tooltip">
+              <rect x="680" y="5" width="110" height="30" rx="4" />
+              <text x="735" y="18" text-anchor="middle">Rank #51</text>
+            </g>
+          </svg>
+        </div>
+      </div>
+
+      <!-- Molecular Stats Grid -->
+      <div class="molecular-grid">
+        <!-- Card A -->
+        <div class="molecule-card">
+          <div class="molecule-icon">🏔️</div>
+          <div class="molecule-data">
+            <span class="counter" data-target="1595">0</span>
+            <span class="label">Positions Climbed</span>
+          </div>
+          <p class="molecule-sub">From Rank 1646 to 51 in 2.5 years.</p>
+        </div>
+
+        <!-- Card B: U-12 -->
+        <div class="molecule-card">
+          <div class="molecule-icon">🎾</div>
+          <div class="molecule-data">
+            <span class="static-text">U-12</span>
+            <span class="label">Top 150</span>
+          </div>
+          <p class="molecule-sub">18 weeks in Top 150. #2 in State. Peak: Rank #138.</p>
+        </div>
+
+        <!-- Card C: U-14 -->
+        <div class="molecule-card">
+          <div class="molecule-icon">🏆</div>
+          <div class="molecule-data">
+            <span class="counter" data-target="27">0</span>
+            <span class="label">Weeks in Top 100</span>
+          </div>
+          <p class="molecule-sub">U-14 Peak: National Rank #51.</p>
+        </div>
+
+        <!-- Card D: U-16 -->
+        <div class="molecule-card">
+          <div class="molecule-icon">🌍</div>
+          <div class="molecule-data">
+            <span class="static-text">U-16</span>
+            <span class="label">International</span>
+          </div>
+          <p class="molecule-sub">Competed in Spain (2022) and national circuits.</p>
+        </div>
+
+
+      </div>
+
+      <!-- Tennis Carousel -->
+      <div class="carousel-container tennis-carousel">
+        <div class="carousel-track-container">
+          <ul class="carousel-track">
+            <li class="carousel-slide current-slide">
+              <img loading="lazy" src="/assets/images/tennis-1.jpg" alt="Tennis Action Shot" class="carousel-image">
+            </li>
+            <li class="carousel-slide">
+              <img loading="lazy" src="/assets/images/tennis-2.jpg" alt="Tennis Tournament" class="carousel-image">
+            </li>
+            <li class="carousel-slide">
+              <img loading="lazy" src="/assets/images/tennis-3.jpg" alt="Tennis Training" class="carousel-image">
+            </li>
+            <li class="carousel-slide">
+              <img loading="lazy" src="/assets/images/tennis-hero.jpg" alt="Tennis Match" class="carousel-image">
+            </li>
+          </ul>
+        </div>
+        <button class="carousel-button carousel-button--left is-hidden">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="15 18 9 12 15 6"></polyline>
+          </svg>
+        </button>
+        <button class="carousel-button carousel-button--right">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        </button>
+        <div class="carousel-nav">
+          <button class="carousel-indicator current-slide"></button>
+          <button class="carousel-indicator"></button>
+          <button class="carousel-indicator"></button>
+          <button class="carousel-indicator"></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Leadership & Impact Section -->
+  <section id="impact" class="section">
+    <div class="container">
+      <h2 class="section-title">Leadership &amp; Impact</h2>
+      <p class="section-subtitle">Using my voice and energy to uplift others and drive change.</p>
+
+      <!-- Impact Grid -->
+      <div class="impact-grid">
+        <!-- Card 1: HMUN -->
+        <div class="impact-card">
+          <div class="impact-icon">🌍</div>
+          <h3>Global Debate</h3>
+          <p><strong>Harvard Model UN</strong></p>
+          <p>Engaging in high-level policy debate and diplomacy, representing diverse perspectives on global issues.</p>
+        </div>
+
+        <!-- Card 2: TED-Ed -->
+        <div class="impact-card">
+          <div class="impact-icon">🎤</div>
+          <h3>Public Speaking</h3>
+          <p><strong>TED-Ed Student Talks</strong></p>
+          <p>Sharing ideas worth spreading and inspiring peers through structured, compelling storytelling.</p>
+        </div>
+
+        <!-- Card 3: Sports Captain -->
+        <div class="impact-card">
+          <div class="impact-icon">🏆</div>
+          <h3>Leadership</h3>
+          <p><strong>Sports Captain</strong></p>
+          <p>Mentoring junior athletes and fostering a culture of sportsmanship and teamwork within the school.</p>
+        </div>
+      </div>
+
+      <!-- Impact Spotlight: Anamay -->
+      <div class="impact-spotlight">
+        <div class="spotlight-content">
+          <h3 class="spotlight-title">Making Connections at Anamay Old Age Home</h3>
+          <p class="spotlight-quote">"You remind me of my son."</p>
+          <div class="spotlight-text">
+            <p>Those six words, spoken by an elderly woman I'd been visiting for months, encapsulate the most meaningful
+              volunteer experience of my life.</p>
+            <p>When I first started volunteering at Anamay old age home, I was assigned to visit residents who had
+              limited family interaction. One grandmother in particular stood out—not for her warmth, but for her
+              distance. She sat alone, a pack of cards perpetually on her table, and showed no interest in group
+              activities or conversation.</p>
+            <p>On my third visit, I tried a different approach. Instead of leading with questions, I simply asked about
+              the cards. She looked at me suspiciously at first, then asked if I wanted to learn a game her late father
+              had taught her.</p>
+            <p>For the next hour, she taught me the rules, laughed at my mistakes, and—for the first time—stayed for the
+              music session afterward. <strong>That experience taught me that meaningful connection requires patience,
+                genuine curiosity, and the willingness to meet people where they are emotionally.</strong></p>
+          </div>
+        </div>
+        <div class="spotlight-image-container">
+          <img loading="lazy" src="/assets/images/volunteer.jpg" alt="Volunteering at Anamay" class="spotlight-image">
+        </div>
+      </div>
+
+      <!-- TED-Ed Featured Section -->
+      <div class="ted-ed-section">
+        <h2>TED-Ed 2025 Speaker</h2>
+        <div class="ted-ed-content">
+          <div class="ted-ed-image">
+            <img loading="lazy" src="/assets/images/ted-ed-stage.png" alt="Dev speaking at TED-Ed 2025">
+          </div>
+          <div class="ted-ed-text">
+            <h3>Sharing Ideas on a Global Stage</h3>
+            <p>In January 2025, I had the privilege of speaking at TED-Ed, where I communicated complex scientific
+              concepts to a diverse audience. This experience reinforced my commitment to scientific literacy and
+              effective science communication.</p>
+            <a href="https://www.youtube.com/live/zWol4Okiw3E?t=3960s" target="_blank" rel="noopener noreferrer"
+              class="btn-outline">
+              Watch the Talk →
+            </a>
+          </div>
+        </div>
+      </div>
+
     </div>
   </section>
 
@@ -216,16 +710,27 @@
     <div class="container">
       <h2 class="section-title">Get in Touch</h2>
       <p>I am always open to discussing research, science, and future opportunities.</p>
-      <a href="mailto:dev@example.com" class="btn btn-primary">Contact Me</a>
+      <a href="mailto:devkturakhia@gmail.com" class="btn btn-primary">Contact Me</a>
     </div>
   </section>
 
   <footer>
     <div class="container">
-      <p>&copy; 2024 Dev. All Rights Reserved.</p>
+      <div class="footer-content">
+        <p>&copy; 2025 Dev Turakhia. All Rights Reserved.</p>
+        <div class="footer-links">
+          <a href="https://linkedin.com/in/dev-turakhia" target="_blank" rel="noopener noreferrer"
+            class="footer-link">LinkedIn</a>
+          <a href="https://github.com/devturakhia" target="_blank" rel="noopener noreferrer"
+            class="footer-link">GitHub</a>
+          <a href="mailto:devkturakhia@gmail.com" class="footer-link">Email</a>
+        </div>
+      </div>
     </div>
   </footer>
 
+  <script type="module" src="/animations.js"></script>
+  <script type="module" src="/interactivity.js"></script>
   <script type="module" src="/main.js"></script>
 </body>
 
