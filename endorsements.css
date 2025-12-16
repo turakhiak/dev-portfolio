@@ -1,0 +1,55 @@
+/* Endorsements Section */
+.endorsements-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.endorsement-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 2rem;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.endorsement-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary);
+}
+
+.quote-icon {
+    font-size: 3rem;
+    color: var(--primary);
+    opacity: 0.3;
+    line-height: 1;
+    margin-bottom: 1rem;
+}
+
+.quote-text {
+    font-size: 1.1rem;
+    color: var(--color-text);
+    font-style: italic;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.quote-author {
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 1rem;
+}
+
+.author-role {
+    font-weight: 600;
+    color: var(--color-heading);
+}
+
+.author-school {
+    font-size: 0.9rem;
+    color: var(--color-text);
+    opacity: 0.8;
+}
