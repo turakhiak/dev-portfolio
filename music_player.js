@@ -58,18 +58,18 @@ function initPlayer() {
 
     // Error handling
     audio.addEventListener('error', (e) => {
-        console.warn("Audio file load error", audio.src);
-        // Don't show error text gracefully, just stop spinning
+        console.error("Audio Load Error:", audio.error);
+        const errorMsg = `Error: ${audio.error ? audio.error.message : 'Unknown'}`;
+        trackArtist.textContent = errorMsg;
         vinylRecord.classList.remove('spinning');
         playBtn.innerHTML = '▶';
         isPlaying = false;
     });
 
     // Handle clicks on vinyl to open/close
-    vinylRecord.addEventListener('click', () => {
-        if (playerContainer.classList.contains('minimized')) {
-            togglePlayerSize();
-        }
+    vinylRecord.addEventListener('click', (e) => {
+        e.stopPropagation(); // Prevent bubbling issues
+        togglePlayerSize();
     });
 }
 
