@@ -1785,6 +1785,7 @@ footer {
 .carousel-container {
     position: relative;
     height: 400px;
+    max-width: 100%;
     width: 100%;
     margin: 0 auto;
 }
@@ -1832,6 +1833,38 @@ footer {
     height: 100%;
     object-fit: cover;
     object-position: center 30%;
+}
+
+.carousel-video {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    /* Prevent cropping of tennis technique */
+    background: #000;
+    /* Background for vertical/non-standard videos */
+}
+
+.video-overlay {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 8px 16px;
+    background: rgba(10, 25, 47, 0.8);
+    border: 1px solid rgba(204, 255, 0, 0.3);
+    border-radius: 4px;
+    pointer-events: none;
+    z-index: 10;
+}
+
+.video-label {
+    color: var(--color-neon-yellow);
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family: 'Inter', sans-serif;
+    display: block;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .carousel-button {
@@ -2229,8 +2262,9 @@ footer {
 /* Tennis Carousel Adjustments */
 .tennis-carousel {
     margin-top: 60px;
-    max-width: 800px;
-    /* Match chart width */
+    max-width: 500px !important;
+    width: 500px !important;
+    height: 700px !important;
     margin-left: auto;
     margin-right: auto;
     border-radius: 12px;
@@ -2241,8 +2275,29 @@ footer {
 
 .tennis-carousel .carousel-image {
     width: 100%;
-    height: 400px;
+    height: 450px;
     object-fit: cover;
+}
+
+.tennis-carousel .carousel-video {
+    width: 100%;
+    height: 500px;
+    /* Slightly taller for better technical view */
+    background: #050a14;
+}
+
+.tennis-carousel.carousel-container {
+    height: 700px !important;
+}
+
+.tennis-carousel .carousel-video {
+    width: 100%;
+    height: 700px !important;
+    background: #000;
+}
+
+.tennis-carousel .carousel-track-container {
+    height: 700px !important;
 }
 
 /* Enhanced Chart Styles */
