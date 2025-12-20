@@ -65,6 +65,58 @@
     </div>
   </div>
 
+  <!-- Tennis Photos Modal -->
+  <div class="modal-overlay" id="tennisPhotosModal">
+    <div class="modal-content tennis-modal-content">
+      <button class="modal-close" aria-label="Close modal">&times;</button>
+      <div class="modal-header">
+        <h2 class="modal-title">Tennis Action Shots</h2>
+      </div>
+      <div class="modal-body">
+        <div class="carousel-container tennis-photos-carousel">
+          <div class="carousel-track-container">
+            <ul class="carousel-track">
+              <li class="carousel-slide current-slide">
+                <img src="/assets/images/tennis1.jpg" alt="Tennis Action 1" class="carousel-image">
+              </li>
+              <li class="carousel-slide">
+                <img src="/assets/images/tennis2.jpg" alt="Tennis Action 2" class="carousel-image">
+              </li>
+              <li class="carousel-slide">
+                <img src="/assets/images/tennis3.jpg" alt="Tennis Action 3" class="carousel-image">
+              </li>
+              <li class="carousel-slide">
+                <img src="/assets/images/tennis4.jpg" alt="Tennis Action 4" class="carousel-image">
+              </li>
+              <li class="carousel-slide">
+                <img src="/assets/images/tennis5.jpg" alt="Tennis Action 5" class="carousel-image">
+              </li>
+            </ul>
+          </div>
+          <button class="carousel-button carousel-button--left is-hidden">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="15 18 9 12 15 6"></polyline>
+            </svg>
+          </button>
+          <button class="carousel-button carousel-button--right">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+          </button>
+          <div class="carousel-nav">
+            <button class="carousel-indicator current-slide"></button>
+            <button class="carousel-indicator"></button>
+            <button class="carousel-indicator"></button>
+            <button class="carousel-indicator"></button>
+            <button class="carousel-indicator"></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <nav class="navbar">
     <div class="container">
       <a href="#" class="logo">Dev Turakhia</a>
@@ -104,7 +156,7 @@
               <p>Focusing on polymer degradation and MOFs for sustainable engineering solutions.</p>
             </div>
           </div>
-          <div class="visual-card tennis-card">
+          <div class="visual-card tennis-card" id="heroTennisCard" style="cursor: pointer;">
             <div class="visual-card-header">
               <img loading="lazy" src="/assets/images/tennis-hero.jpg" alt="Tennis" class="card-thumb">
               <div class="card-info">

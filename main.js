@@ -259,4 +259,103 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     });
+
+    // Tennis Photos Modal
+    const heroTennisCard = document.getElementById('heroTennisCard');
+    const tennisPhotosModal = document.getElementById('tennisPhotosModal');
+
+    if (heroTennisCard && tennisPhotosModal) {
+        // Open modal when clicking tennis card
+        heroTennisCard.addEventListener('click', () => {
+            tennisPhotosModal.classList.add('active');
+            document.body.style.overflow = 'hidden'; // Prevent background scrolling
+        });
+
+        // Close modal handlers
+        const closeModal = () => {
+            tennisPhotosModal.classList.remove('active');
+            document.body.style.overflow = ''; // Restore scrolling
+        };
+
+        // Close button
+        const closeButton = tennisPhotosModal.querySelector('.modal-close');
+        if (closeButton) {
+            closeButton.addEventListener('click', closeModal);
+        }
+
+        // Click overlay to close
+        tennisPhotosModal.addEventListener('click', (e) => {
+            if (e.target === tennisPhotosModal) {
+                closeModal();
+            }
+        });
+
+        // ESC key to close
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && tennisPhotosModal.classList.contains('active')) {
+                closeModal();
+            }
+        });
+
+        // Initialize carousel for tennis photos modal
+        const tennisModalCarousel = tennisPhotosModal.querySelector('.tennis-photos-carousel');
+        if (tennisModalCarousel) {
+            const track = tennisModalCarousel.querySelector('.carousel-track');
+            const slides = Array.from(track.children);
+            const nextButton = tennisModalCarousel.querySelector('.carousel-button--right');
+            const prevButton = tennisModalCarousel.querySelector('.carousel-button--left');
+            const dotsNav = tennisModalCarousel.querySelector('.carousel-nav');
+            const dots = Array.from(dotsNav.children);
+
+            const slideWidth = slides[0].getBoundingClientRect().width;
+
+            // Arrange slides in a row
+            slides.forEach((slide, index) => {
+                slide.style.left = slideWidth * index + 'px';
+            });
+
+            // Next button
+            nextButton.addEventListener('click', () => {
+                const currentSlide = track.querySelector('.current-slide');
+                const nextSlide = currentSlide.nextElementSibling;
+
+                if (nextSlide) {
+                    const currentDot = dotsNav.querySelector('.current-slide');
+                    const nextDot = currentDot.nextElementSibling;
+                    moveToSlide(track, currentSlide, nextSlide);
+                    updateDots(currentDot, nextDot);
+                    hideShowArrows(slides, prevButton, nextButton, nextSlide);
+                }
+            });
+
+            // Previous button
+            prevButton.addEventListener('click', () => {
+                const currentSlide = track.querySelector('.current-slide');
+                const prevSlide = currentSlide.previousElementSibling;
+
+                if (prevSlide) {
+                    const currentDot = dotsNav.querySelector('.current-slide');
+                    const prevDot = currentDot.previousElementSibling;
+                    moveToSlide(track, currentSlide, prevSlide);
+                    updateDots(currentDot, prevDot);
+                    hideShowArrows(slides, prevButton, nextButton, prevSlide);
+                }
+            });
+
+            // Dot navigation
+            dots.forEach((dot, index) => {
+                dot.addEventListener('click', () => {
+                    const currentSlide = track.querySelector('.current-slide');
+                    const currentDot = dotsNav.querySelector('.current-slide');
+                    const targetSlide = slides[index];
+                    const targetDot = dots[index];
+
+                    moveToSlide(track, currentSlide, targetSlide);
+                    updateDots(currentDot, targetDot);
+                    hideShowArrows(slides, prevButton, nextButton, targetSlide);
+                });
+            });
+        }
+    }
 });
+
