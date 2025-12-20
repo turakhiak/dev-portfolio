@@ -1,55 +1,96 @@
-/* Endorsements Section */
-.endorsements-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
-}
+/* Endorsements CSS */
 
+/* Endorsement Card Enhancements */
 .endorsement-card {
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 12px;
-    padding: 2rem;
     position: relative;
-    transition: transform 0.3s ease;
-}
-
-.endorsement-card:hover {
-    transform: translateY(-5px);
-    border-color: var(--primary);
-}
-
-.quote-icon {
-    font-size: 3rem;
-    color: var(--primary);
-    opacity: 0.3;
-    line-height: 1;
-    margin-bottom: 1rem;
-}
-
-.quote-text {
-    font-size: 1.1rem;
-    color: var(--color-text);
-    font-style: italic;
-    margin-bottom: 1.5rem;
-    line-height: 1.6;
-}
-
-.quote-author {
     display: flex;
     flex-direction: column;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    padding-top: 1rem;
+    justify-content: space-between;
+    /* Ensure existing styles are preserved but add flex for button positioning */
 }
 
-.author-role {
-    font-weight: 600;
-    color: var(--color-heading);
-}
-
-.author-school {
+/* Read Full Letter Button */
+.read-more-btn {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: transparent;
+    border: 1px solid var(--accent-color, #4facfe);
+    color: var(--accent-color, #4facfe);
+    border-radius: 20px;
+    cursor: pointer;
     font-size: 0.9rem;
-    color: var(--color-text);
-    opacity: 0.8;
+    transition: all 0.3s ease;
+    align-self: flex-start;
+}
+
+.read-more-btn:hover {
+    background-color: var(--accent-color, #4facfe);
+    color: #fff;
+}
+
+/* Endorsement Modal Specialized Styles */
+.endorsement-modal-content {
+    max-width: 800px;
+    width: 90%;
+    padding: 0;
+    /* Let internal containers handle padding */
+    overflow: hidden;
+}
+
+.modal-header {
+    padding: 1.5rem 2rem;
+    background: var(--bg-secondary, #f8f9fa);
+    border-bottom: 1px solid var(--border-color, #e9ecef);
+}
+
+.modal-title {
+    margin: 0;
+    font-size: 1.5rem;
+    color: var(--text-primary, #333);
+}
+
+.modal-type {
+    display: block;
+    font-size: 1rem;
+    color: var(--text-secondary, #666);
+    margin-top: 0.5rem;
+}
+
+.modal-body {
+    padding: 0;
+    background-color: #fdfbf7;
+    /* Slight warm tone for paper feel */
+    max-height: 70vh;
+    overflow-y: auto;
+}
+
+/* Paper / Letter Styling */
+.letter-paper {
+    padding: 3rem;
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #1a1a1a;
+}
+
+.letter-content p {
+    margin-bottom: 1.5rem;
+}
+
+/* Close button positioning fix for this modal type */
+.endorsement-modal-content .modal-close {
+    top: 1rem;
+    right: 1.5rem;
+    color: #666;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .letter-paper {
+        padding: 1.5rem;
+    }
+
+    .modal-header {
+        padding: 1rem;
+    }
 }

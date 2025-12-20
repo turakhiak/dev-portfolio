@@ -221,8 +221,10 @@
           <div class="research-status ongoing">Ongoing</div>
           <div class="research-icon">⚗️</div>
           <div class="research-type project">Research Project</div>
-          <h3>Silver Nanoparticles from Firework Waste</h3>
-          <p class="research-summary">Converting explosive waste into functional nanomaterials for catalysis</p>
+          <h3>Silver Nanoparticles</h3>
+          <p class="research-summary">Synthesis from firework waste via the <strong>ReWIRE Program</strong> at
+            <strong>IISER Pune</strong>
+          </p>
           <div class="research-expanded">
             <div class="key-learnings">
               <h4>Key Learnings</h4>
@@ -337,43 +339,58 @@
   <section id="academics" class="section">
     <div class="container">
       <h2 class="section-title">Academics</h2>
-      <p class="section-subtitle" style="text-align: center; margin-bottom: 2rem;">Student at Cambridge School of
-        Excellence</p>
+      <p class="section-subtitle" style="text-align: center; margin-bottom: 2rem;">Student at <a
+          href="https://bvrtse.in/" target="_blank" rel="noopener noreferrer"
+          style="color: inherit; text-decoration: none; border-bottom: 1px solid currentColor;">Bharati Vidyapeeth
+          Rabindranath Tagore School of Excellence</a></p>
       <div class="academics-grid">
-        <div class="stat-card highlight">
-          <span class="stat-value">1490</span>
-          <span class="stat-label">SAT Score</span>
-          <div class="stat-detail">Math: 740 | English: 750</div>
-        </div>
-        <div class="stat-card">
-          <span class="stat-value">3 A*s</span>
-          <span class="stat-label">O-Level Sciences</span>
-          <div class="stat-detail">Biology, Chemistry, Physics</div>
-        </div>
-        <div class="stat-card">
-          <span class="stat-value">A</span>
-          <span class="stat-label">O-Level Math</span>
-        </div>
-      </div>
+        <!-- Row 1: SAT & Predicted A-Levels -->
+        <div class="academics-grid">
+          <!-- Row 1 -->
+          <div class="stat-card highlight">
+            <span class="stat-value">1490</span>
+            <span class="stat-label">SAT Score</span>
+            <div class="stat-detail">Reading/Writing: 750 | Math: 740</div>
+          </div>
+          <div class="stat-card">
+            <span class="stat-value">A*, 3 As</span>
+            <span class="stat-label">A-Level (Predicted)</span>
+            <div class="stat-detail">Chemistry (A*), Math, Physics, Biology (A)</div>
+          </div>
 
-      <div class="current-studies">
-        <h3>Current A-Level Subjects</h3>
-        <ul class="subject-list">
-          <li>Chemistry</li>
-          <li>Physics</li>
-          <li>Biology</li>
-          <li>Mathematics</li>
-          <li>English</li>
-        </ul>
+          <!-- Row 2 -->
+          <div class="stat-card highlight">
+            <span class="stat-value">4 'a's</span>
+            <span class="stat-label">AS Level Results</span>
+            <div class="stat-detail">Math, Physics, Chem, Bio</div>
+          </div>
+          <div class="stat-card">
+            <span class="stat-value">3 A*s, 1 A</span>
+            <span class="stat-label">IGCSE Results</span>
+            <div class="stat-detail">Sciences (A*), Math (A)</div>
+          </div>
+        </div>
+
+        <div class="current-studies">
+          <h3>Current A-Level Subjects</h3>
+          <ul class="subject-list">
+            <li>Chemistry</li>
+            <li>Physics</li>
+            <li>Biology</li>
+            <li>Mathematics</li>
+            <li>English</li>
+          </ul>
+        </div>
       </div>
-    </div>
   </section>
 
   <section id="endorsements" class="section">
     <div class="container">
       <h2 class="section-title">What Mentors Say</h2>
       <div class="endorsements-grid">
-        <div class="endorsement-card">
+
+        <!-- Math Teacher -->
+        <div class="endorsement-card" data-endorsement="math">
           <div class="quote-icon">❝</div>
           <p class="quote-text">"Dev has consistently demonstrated strong potential... I deem it my pleasure to teach
             Dev Mathematics... and witness his steady academic progress and growing maturity as a learner."</p>
@@ -381,8 +398,11 @@
             <span class="author-role">Mathematics Teacher</span>
             <span class="author-school">Cambridge School of Excellence</span>
           </div>
+          <button class="read-more-btn" onclick="openEndorsement('math')">Read Full Letter</button>
         </div>
-        <div class="endorsement-card">
+
+        <!-- Chemistry Teacher -->
+        <div class="endorsement-card" data-endorsement="chemistry">
           <div class="quote-icon">❝</div>
           <p class="quote-text">"It is my absolute pleasure to write this letter of recommendation for Dev... whom I
             have taught Chemistry from Grade 9 through Grade 12. He was still developing his emotional confidence...
@@ -391,10 +411,40 @@
             <span class="author-role">Chemistry Teacher</span>
             <span class="author-school">Bharati Vidyapeeth</span>
           </div>
+          <button class="read-more-btn" onclick="openEndorsement('chemistry')">Read Full Letter</button>
         </div>
+
+        <!-- Counselor -->
+        <div class="endorsement-card" data-endorsement="counselor">
+          <div class="quote-icon">❝</div>
+          <p class="quote-text">"Dev possesses a rare combination of scientific aptitude and versatility... He leads
+            with integrity and humility."</p>
+          <div class="quote-author">
+            <span class="author-role">School Counselor & Principal</span>
+            <span class="author-school">Bharati Vidyapeeth</span>
+          </div>
+          <button class="read-more-btn" onclick="openEndorsement('counselor')">Read Full Letter</button>
+        </div>
+
       </div>
     </div>
   </section>
+
+  <!-- Endorsement Modal -->
+  <div class="modal-overlay" id="endorsementModal">
+    <div class="modal-content endorsement-modal-content">
+      <button class="modal-close" onclick="closeEndorsementModal()" aria-label="Close modal">&times;</button>
+      <div class="modal-header">
+        <h2 class="modal-title" id="endorsementTitle">Letter of Recommendation</h2>
+        <span class="modal-type" id="endorsementAuthor"></span>
+      </div>
+      <div class="modal-body">
+        <div class="letter-paper">
+          <div class="letter-content" id="endorsementText"></div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- Future Vision Section -->
   <section id="vision" class="section vision-section">

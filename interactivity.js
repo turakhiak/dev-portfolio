@@ -124,6 +124,76 @@ const initEnhancedCounters = () => {
     counters.forEach(counter => counterObserver.observe(counter));
 };
 
+// Endorsement Data (Extracted from PDFs)
+const endorsements = {
+    math: {
+        author: "Ms. Puja Nargund - Mathematics Teacher, Cambridge School of Excellence",
+        text: `
+      <p><strong>To Whom It May Concern,</strong></p>
+      <p>It is my distinct pleasure to write this letter of recommendation for <strong>Dev Turakhia</strong>. I have had the opportunity to teach Dev Mathematics at the Cambridge School of Excellence and have witnessed his steady academic progress and growing maturity as a learner.</p>
+      <p>Dev has consistently demonstrated strong potential in Mathematics, with a quick grasp of complex concepts in algebra, calculus, and trigonometry. His predicted grade of <strong>'A'</strong> in A-Level Mathematics is a testament to his dedication and improved focus.</p>
+      <p> Beyond the classroom, what distinguishes Dev is his identity as a <strong>national-level tennis player</strong>. This athletic discipline translates remarkably well into his academic life. He possesses resilience, excellent time management, and a strong sense of teamwork. In group activities, he is often the one encouraging his peers, bringing a balanced leadership style that is neither domineering nor passive.</p>
+      <p>I have seen him approach assessments with intense determination, and his ability to bounce back from academic challenges mirrors his performance on the court. He is a respectful, sincere student who adds value to our school community.</p>
+      <p>I am confident that Dev will continue to excel in his future endeavors and recommend him enthusiastically for his university applications.</p>
+      <p>Sincerely,<br>Ms. Puja Nargund</p>
+    `
+    },
+    chemistry: {
+        author: "Ms. Jumana Gari - Chemistry Teacher, Bharati Vidyapeeth",
+        text: `
+      <p><strong>To the Admissions Committee,</strong></p>
+      <p>It is my absolute pleasure to write this letter of recommendation for Dev Turakhia, whom I have known as his Chemistry teacher from Grade 9 through Grade 12.</p>
+      <p>When I first met Dev, he was a quiet student, still developing his emotional confidence. Over the years, I have watched him transform into a <strong>confident, independent, and intellectually vibrant young scientist</strong>. His predicted <strong>A*</strong> in A-Level Chemistry is not just a grade; it is a reflection of his deep conceptual understanding and his ability to apply advanced principles like Gibbs free energy and entropy to real-world scenarios.</p>
+      <p>In the laboratory, Dev is extremely precise. His titration accuracy is often used as a reference for the entire class. His passion extends beyond the curriculum, as evidenced by his participation in the <strong>'ReWIRE' research program</strong> on silver nanoparticles and his internship at Rajiv Gandhi Biotechnology College.</p>
+      <p>Dev has grown into a contributing member of our community who leads with integrity. He balances his rigorous academic schedule with his commitment to tennis, showing a level of discipline that is rare for his age.</p>
+      <p>I have no doubt that Dev will thrive in a challenging academic environment and make significant contributions to the field of chemical engineering.</p>
+      <p>Yours sincerely,<br>Ms. Jumana Gari</p>
+    `
+    },
+    counselor: {
+        author: "Ms. Jumana Gari - School Counselor & Principal",
+        text: `
+      <p><strong>Recommendation for Dev Turakhia</strong></p>
+      <p>Dev possesses a rare combination of <strong>scientific aptitude and versatility</strong>. As his School Counselor and Principal, I have observed his holistic development over several years.</p>
+      <p>Dev is not just a scholar; he is a leader. His role as <strong>Sports Captain</strong> required him to mentor junior athletes and organize inter-school tournaments, tasks he handled with great maturity. He also represented our school as a Rapporteur at BMUN and as a speaker at TED-Ed, where he shared his ideas on scientific literacy.</p>
+      <p>What stands out most about Dev is his proactive nature. He seeks out learning opportunities, whether it is analyzing supply chains during an internship or conducting polymer research alongside his studies. He leads with integrity and humility, always willing to listen and learn from others.</p>
+      <p>His ability to balance top-tier athletic excellence (Top 50 National Rank) with rigorous A-Level academics is exceptional. Dev is a resilient, well-rounded individual who represents the very best of our student body.</p>
+      <p>I strongly recommend him for admission to your esteemed institution.</p>
+      <p>Sincerely,<br>Ms. Jumana Gari<br>Principal</p>
+    `
+    }
+};
+
+// Open Endorsement Modal
+window.openEndorsement = (type) => {
+    const modal = document.getElementById('endorsementModal');
+    const title = document.getElementById('endorsementTitle');
+    const author = document.getElementById('endorsementAuthor');
+    const content = document.getElementById('endorsementText');
+
+    if (endorsements[type]) {
+        author.textContent = endorsements[type].author;
+        content.innerHTML = endorsements[type].text;
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden'; // Prevent background scrolling
+    }
+};
+
+// Close Endorsement Modal
+window.closeEndorsementModal = () => {
+    const modal = document.getElementById('endorsementModal');
+    modal.classList.remove('active');
+    document.body.style.overflow = '';
+};
+
+// Close on outside click
+window.addEventListener('click', (e) => {
+    const modal = document.getElementById('endorsementModal');
+    if (e.target === modal) {
+        closeEndorsementModal();
+    }
+});
+
 // Lazy Loading Fallback (for older browsers)
 const initLazyLoading = () => {
     if ('loading' in HTMLImageElement.prototype) {
