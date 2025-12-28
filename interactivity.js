@@ -74,7 +74,7 @@ const endorsements = {
     `
     },
     counselor: {
-        author: "Ms. Ipsita Das - School Counselor, BVRTSE",
+        author: "Ms. Ipsita Das - Higher Secondary Counselor, BVRTSE",
         text: `
       <p>I am pleased to write this letter of recommendation for <strong>Dev Kunal Turakhia</strong>, whom I have had opportunity to know closely since Grade 9 at Bharati Vidyapeeth Rabindranath Tagore School of Excellence. When Dev joined the school in Grade 9, he was still developing his emotional confidence and adjusting to a new academic and social environment. Over the years, I have witnessed a marked transformation in him. Today, Dev stands out as a confident, focused, and mature young individual who approaches his responsibilities with maturity and perseverance.</p>
       <p>Dev is deeply passionate about sports, particularly tennis and football. His commitment, discipline, and enthusiasm led him to take on leadership roles, and he went on to become <strong>Sports Captain</strong> of the school. In this role, he demonstrated strong leadership skills, responsibility, and the ability to motivate and guide his peers. He has also represented school in several football tournaments, consistently displaying sportsmanship, teamwork, and resilience.</p>
