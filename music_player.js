@@ -4,19 +4,19 @@ const playlist = [
     {
         title: "West End Blues (1928)",
         artist: "Louis Armstrong",
-        file: "/assets/audio/west_end_blues.mp3",
+        file: "assets/audio/west_end_blues.mp3",
         cover: "assets/images/vinyl-cover-1.jpg"
     },
     {
         title: "Potato Head Blues (1927)",
         artist: "Louis Armstrong & His Hot Seven",
-        file: "/assets/audio/potato_head_blues.mp3",
+        file: "assets/audio/potato_head_blues.mp3",
         cover: "assets/images/vinyl-cover-2.jpg"
     },
     {
         title: "Muskrat Ramble (1926)",
         artist: "Louis Armstrong & His Hot Five",
-        file: "/assets/audio/muskrat_ramble.mp3",
+        file: "assets/audio/muskrat_ramble.mp3",
         cover: "assets/images/vinyl-cover-3.jpg"
     }
 ];
