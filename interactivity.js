@@ -74,15 +74,16 @@ const endorsements = {
     `
     },
     counselor: {
-        author: "Ms. Jumana Gari - School Counselor & Principal",
+        author: "Ms. Ipsita Das - School Counselor, BVRTSE",
         text: `
-      <p><strong>Recommendation for Dev Turakhia</strong></p>
-      <p>Dev possesses a rare combination of <strong>scientific aptitude and versatility</strong>. As his School Counselor and Principal, I have observed his holistic development over several years.</p>
-      <p>Dev is not just a scholar; he is a leader. His role as <strong>Sports Captain</strong> required him to mentor junior athletes and organize inter-school tournaments, tasks he handled with great maturity. He also represented our school as a Rapporteur at BMUN and as a speaker at TED-Ed, where he shared his ideas on scientific literacy.</p>
-      <p>What stands out most about Dev is his proactive nature. He seeks out learning opportunities, whether it is analyzing supply chains during an internship or conducting polymer research alongside his studies. He leads with integrity and humility, always willing to listen and learn from others.</p>
-      <p>His ability to balance top-tier athletic excellence (Top 50 National Rank) with rigorous A-Level academics is exceptional. Dev is a resilient, well-rounded individual who represents the very best of our student body.</p>
-      <p>I strongly recommend him for admission to your esteemed institution.</p>
-      <p>Sincerely,<br>Ms. Jumana Gari<br>Principal</p>
+      <p>I am pleased to write this letter of recommendation for <strong>Dev Kunal Turakhia</strong>, whom I have had opportunity to know closely since Grade 9 at Bharati Vidyapeeth Rabindranath Tagore School of Excellence. When Dev joined the school in Grade 9, he was still developing his emotional confidence and adjusting to a new academic and social environment. Over the years, I have witnessed a marked transformation in him. Today, Dev stands out as a confident, focused, and mature young individual who approaches his responsibilities with maturity and perseverance.</p>
+      <p>Dev is deeply passionate about sports, particularly tennis and football. His commitment, discipline, and enthusiasm led him to take on leadership roles, and he went on to become <strong>Sports Captain</strong> of the school. In this role, he demonstrated strong leadership skills, responsibility, and the ability to motivate and guide his peers. He has also represented school in several football tournaments, consistently displaying sportsmanship, teamwork, and resilience.</p>
+      <p>Beyond Sports, Dev has shown commendable personal growth by overcoming his initial fear of public speaking. This growth was most evident when he confidently took the stage as a Speaker at a <strong>TED-style event</strong>, where he spoke on the topic "Great Expectations: Thriving in an Absurd World." His ability to articulate ideas thoughtfully and engage an audience reflected both courage and intellectual maturity.</p>
+      <p>Dev has also contributed significantly to the success of <strong>BVRTSE Model United Nations</strong> by Serving on the Organising Committee. In this capacity, he demonstrated strong organisational skills, collaboration, and a sense of ownership, working diligently behind the scenes to ensure the smooth execution of the event.</p>
+      <p>What truly distinguishes Dev is the quality of his relationships within the school community. He shares a strong and respectful bond not only with his peers but also with his teachers and juniors. His approachable nature, willingness to support others, and ability to lead by example have earned him admiration and trust across age groups.</p>
+      <p>Through his journey at school, Dev has developed a clear understanding of the balance between pursuing his passion for sports and maintaining academic discipline. He manages his time effectively, remains focused on his studies, and consistently upholds his academic responsibilities alongside his extracurricular commitments.</p>
+      <p>I strongly recommend Dev as a student of integrity, leadership, and commitment. I am confident that he will continue to grow and make meaningful contributions in any academic or professional environment he chooses to pursue.</p>
+      <p>Sincerely,<br>Ms. Ipsita Das<br>School Counselor</p>
     `
     }
 };
