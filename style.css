@@ -1452,20 +1452,6 @@ ul {
     color: var(--color-text);
 }
 
-/* Placeholder */
-.research-placeholder {
-    margin-top: 15px;
-    padding: 15px;
-    background: rgba(255, 255, 255, 0.02);
-    border: 1px dashed var(--glass-border);
-    border-radius: 8px;
-}
-
-.placeholder-text {
-    font-size: 0.8rem;
-    color: #999;
-    font-style: italic;
-}
 
 @media (max-width: 768px) {
     .research-grid {
