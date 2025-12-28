@@ -2,86 +2,6 @@
 // Advanced Interactivity Features
 // =========================================
 
-// Research Project Modal
-const initResearchModals = () => {
-    const modal = document.getElementById('projectModal');
-    const researchCards = document.querySelectorAll('.research-card-compact');
-
-    if (!modal) {
-        console.error('Modal element not found');
-        return;
-    }
-
-    if (researchCards.length === 0) {
-        console.warn('No research cards found');
-        return;
-    }
-
-    const closeBtn = modal.querySelector('.modal-close');
-
-    if (!closeBtn) {
-        console.error('Modal close button not found');
-        return;
-    }
-
-    // Open modal with project data
-    const openModal = (card) => {
-        console.log('Opening modal for card:', card);
-        // Extract data from card
-        const status = card.querySelector('.research-status')?.textContent || '';
-        const title = card.querySelector('h3')?.textContent || '';
-        const type = card.querySelector('.research-type')?.textContent || '';
-        const summary = card.querySelector('.research-summary')?.textContent || '';
-        const expanded = card.querySelector('.research-expanded');
-
-        // Populate modal
-        modal.querySelector('.modal-status').textContent = status;
-        modal.querySelector('.modal-status').className = `modal-status ${card.querySelector('.research-status')?.className.split(' ')[1] || ''}`;
-        modal.querySelector('.modal-title').textContent = title;
-        modal.querySelector('.modal-type').textContent = type;
-        modal.querySelector('.modal-summary').textContent = summary;
-
-        // Clone expanded content
-        const sectionsContainer = modal.querySelector('.modal-sections');
-        sectionsContainer.innerHTML = '';
-        if (expanded) {
-            sectionsContainer.innerHTML = expanded.innerHTML;
-        }
-
-        // Show modal
-        modal.classList.add('active');
-        document.body.style.overflow = 'hidden';
-    };
-
-    // Close modal
-    const closeModal = () => {
-        modal.classList.remove('active');
-        document.body.style.overflow = '';
-    };
-
-    // Event listeners
-    console.log(`Adding click listeners to ${researchCards.length} research cards`);
-    researchCards.forEach(card => {
-        card.addEventListener('click', () => openModal(card));
-        card.style.cursor = 'pointer';
-    });
-
-    closeBtn.addEventListener('click', closeModal);
-
-    // Click outside to close
-    modal.addEventListener('click', (e) => {
-        if (e.target === modal) {
-            closeModal();
-        }
-    });
-
-    // ESC key to close
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && modal.classList.contains('active')) {
-            closeModal();
-        }
-    });
-};
 
 // Enhanced Count-Up Animations
 const initEnhancedCounters = () => {
@@ -256,7 +176,7 @@ const addSwipeIndicators = () => {
 
 // Initialize all features
 document.addEventListener('DOMContentLoaded', () => {
-    initResearchModals();
+
     initEnhancedCounters();
     initLazyLoading();
 
