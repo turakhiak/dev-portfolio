@@ -47,7 +47,7 @@ const initEnhancedCounters = () => {
 // Endorsement Data (Extracted from PDFs)
 const endorsements = {
     math: {
-        author: "Ms. Puja Nargund - Mathematics Teacher, Cambridge School of Excellence",
+        author: "Mrs. Puja Nargund - Mathematics Teacher, Cambridge School of Excellence",
         text: `
       <p><strong>To Whom It May Concern,</strong></p>
       <p>It is my distinct pleasure to write this letter of recommendation for <strong>Dev Turakhia</strong>. I have had the opportunity to teach Dev Mathematics at the Cambridge School of Excellence and have witnessed his steady academic progress and growing maturity as a learner.</p>
@@ -55,7 +55,7 @@ const endorsements = {
       <p> Beyond the classroom, what distinguishes Dev is his identity as a <strong>national-level tennis player</strong>. This athletic discipline translates remarkably well into his academic life. He possesses resilience, excellent time management, and a strong sense of teamwork. In group activities, he is often the one encouraging his peers, bringing a balanced leadership style that is neither domineering nor passive.</p>
       <p>I have seen him approach assessments with intense determination, and his ability to bounce back from academic challenges mirrors his performance on the court. He is a respectful, sincere student who adds value to our school community.</p>
       <p>I am confident that Dev will continue to excel in his future endeavors and recommend him enthusiastically for his university applications.</p>
-      <p>Sincerely,<br>Ms. Puja Nargund</p>
+      <p>Sincerely,<br>Mrs. Puja Nargund</p>
     `
     },
     chemistry: {
@@ -74,7 +74,7 @@ const endorsements = {
     `
     },
     counselor: {
-        author: "Ms. Ipsita Das - Higher Secondary Counselor, BVRTSE",
+        author: "Ms. Ipsita Das - Higher Secondary Coordinator, BVRTSE",
         text: `
       <p>I am pleased to write this letter of recommendation for <strong>Dev Kunal Turakhia</strong>, whom I have had opportunity to know closely since Grade 9 at Bharati Vidyapeeth Rabindranath Tagore School of Excellence. When Dev joined the school in Grade 9, he was still developing his emotional confidence and adjusting to a new academic and social environment. Over the years, I have witnessed a marked transformation in him. Today, Dev stands out as a confident, focused, and mature young individual who approaches his responsibilities with maturity and perseverance.</p>
       <p>Dev is deeply passionate about sports, particularly tennis and football. His commitment, discipline, and enthusiasm led him to take on leadership roles, and he went on to become <strong>Sports Captain</strong> of the school. In this role, he demonstrated strong leadership skills, responsibility, and the ability to motivate and guide his peers. He has also represented school in several football tournaments, consistently displaying sportsmanship, teamwork, and resilience.</p>

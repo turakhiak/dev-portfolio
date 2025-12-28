@@ -71,6 +71,24 @@ function initPlayer() {
         e.stopPropagation(); // Prevent bubbling issues
         togglePlayerSize();
     });
+
+    // Attempt auto-play
+    const playAttempt = () => {
+        audio.play().then(() => {
+            vinylRecord.classList.add('spinning');
+            playBtn.innerHTML = '⏸';
+            isPlaying = true;
+            document.removeEventListener('click', playAttempt);
+        }).catch(err => {
+            console.log("Auto-play blocked, waiting for interaction");
+        });
+    };
+
+    // Try immediately
+    playAttempt();
+
+    // Fallback: play on first click anywhere if still not playing
+    document.addEventListener('click', playAttempt);
 }
 
 function loadTrack(index) {
