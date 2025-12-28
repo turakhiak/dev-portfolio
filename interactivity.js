@@ -51,7 +51,7 @@ const endorsements = {
         text: `
       <p><strong>To Whom It May Concern,</strong></p>
       <p>It is my distinct pleasure to write this letter of recommendation for <strong>Dev Turakhia</strong>. I have had the opportunity to teach Dev Mathematics at the Cambridge School of Excellence and have witnessed his steady academic progress and growing maturity as a learner.</p>
-      <p>Dev has consistently demonstrated strong potential in Mathematics, with a quick grasp of complex concepts in algebra, calculus, and trigonometry. His predicted grade of <strong>'A*'</strong> in A-Level Mathematics is a testament to his dedication and improved focus.</p>
+      <p>Dev has consistently demonstrated strong potential in Mathematics, with a quick grasp of complex concepts in algebra, calculus, and trigonometry. His predicted grade of <strong>'A'</strong> in A-Level Mathematics is a testament to his dedication and improved focus.</p>
       <p> Beyond the classroom, what distinguishes Dev is his identity as a <strong>national-level tennis player</strong>. This athletic discipline translates remarkably well into his academic life. He possesses resilience, excellent time management, and a strong sense of teamwork. In group activities, he is often the one encouraging his peers, bringing a balanced leadership style that is neither domineering nor passive.</p>
       <p>I have seen him approach assessments with intense determination, and his ability to bounce back from academic challenges mirrors his performance on the court. He is a respectful, sincere student who adds value to our school community.</p>
       <p>I am confident that Dev will continue to excel in his future endeavors and recommend him enthusiastically for his university applications.</p>
@@ -59,7 +59,7 @@ const endorsements = {
     `
     },
     chemistry: {
-        author: "Ms. Jumana Gari - Chemistry Teacher, BVRTSE",
+        author: "Dr. Nalini Saxena - Chemistry Teacher, BVRTSE",
         text: `
       <p>It is my absolute pleasure to write this Letter of recommendation for <strong>Dev Kunal Turakhia</strong>, whom I have taught Chemistry from Grade 9 through Grade 12 at BVRISE. Over these years, I have witnessed Dev evolve from a shy and hesitant learner into a confident, independent, and intellectually vibrant young scientist. His transformation, both academically and personally, has been extraordinary, and it has been a privilege to guide and observe his growth.</p>
       <p>Dev displayed a natural curiosity for Chemistry that stood out. What were home experiments soon matured into a disciplined scientific temperament. Over the years, Dev transformed from being merely confident to being genuinely passionate about Chemistry, driven not just by the thrill of reactions but by a desire to understand, analyse, and apply chemical principles with depth and accuracy.</p>
@@ -70,7 +70,7 @@ const endorsements = {
       <p>Dev's scientific reasoning is equally impressive. He independently applies concepts such as entropy changes and <strong>Gibbs free energy calculations</strong> to determine the feasibility of reactions, demonstrating analytical maturity uncommon at the high-school level. His questions reveal depth, originality, and confidence in applying thermodynamics to real-world problems.</p>
       <p>Beyond academics, Dev is a highly versatile and well-rounded student. He is a nationally ranked tennis player, enthusiastic football and basketball player, Sports Captain, Science Challenge leader for two consecutive years, BMUN Rapporteur, TED-Ed speaker, and an intern at multiple organisations including a biotechnology manufacturing facility. His ability to balance rigorous academics with excellence in sports, leadership roles, and internships speaks volumes about his discipline, time management, and intrinsic motivation.</p>
       <p>Dev embodies the qualities universities seek in strong applicants: intellectual curiosity, scientific creativity, resilience, leadership, humility, and initiative. His blend of academic strength, research aptitude, athletic excellence, and emotional maturity makes him one of the most exceptional students I have had the privilege to teach. I strongly and wholeheartedly recommend Dev for admission to your institution. I am confident that he will continue to excel, innovate, and contribute meaningfully in any academic or research environment he becomes part of.</p>
-      <p>Yours sincerely,<br>Ms. Jumana Gari</p>
+      <p>Yours sincerely,<br>Dr. Nalini Saxena</p>
     `
     },
     counselor: {
