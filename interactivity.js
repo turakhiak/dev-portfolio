@@ -51,7 +51,7 @@ const endorsements = {
         text: `
       <p><strong>To Whom It May Concern,</strong></p>
       <p>It is my distinct pleasure to write this letter of recommendation for <strong>Dev Turakhia</strong>. I have had the opportunity to teach Dev Mathematics at the Cambridge School of Excellence and have witnessed his steady academic progress and growing maturity as a learner.</p>
-      <p>Dev has consistently demonstrated strong potential in Mathematics, with a quick grasp of complex concepts in algebra, calculus, and trigonometry. His predicted grade of <strong>'A'</strong> in A-Level Mathematics is a testament to his dedication and improved focus.</p>
+      <p>Dev has consistently demonstrated strong potential in Mathematics, with a quick grasp of complex concepts in algebra, calculus, and trigonometry. His predicted grade of <strong>'A*'</strong> in A-Level Mathematics is a testament to his dedication and improved focus.</p>
       <p> Beyond the classroom, what distinguishes Dev is his identity as a <strong>national-level tennis player</strong>. This athletic discipline translates remarkably well into his academic life. He possesses resilience, excellent time management, and a strong sense of teamwork. In group activities, he is often the one encouraging his peers, bringing a balanced leadership style that is neither domineering nor passive.</p>
       <p>I have seen him approach assessments with intense determination, and his ability to bounce back from academic challenges mirrors his performance on the court. He is a respectful, sincere student who adds value to our school community.</p>
       <p>I am confident that Dev will continue to excel in his future endeavors and recommend him enthusiastically for his university applications.</p>
