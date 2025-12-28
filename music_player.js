@@ -4,20 +4,19 @@ const playlist = [
     {
         title: "West End Blues (1928)",
         artist: "Louis Armstrong",
-        file: "assets/audio/west_end_blues.mp3",
+        file: "/assets/audio/west_end_blues.mp3",
         cover: "assets/images/vinyl-cover-1.jpg"
-        // Note: Cover logic is future work, currently CSS draws the vinyl
     },
     {
         title: "Potato Head Blues (1927)",
         artist: "Louis Armstrong & His Hot Seven",
-        file: "assets/audio/potato_head_blues.mp3",
+        file: "/assets/audio/potato_head_blues.mp3",
         cover: "assets/images/vinyl-cover-2.jpg"
     },
     {
         title: "Muskrat Ramble (1926)",
         artist: "Louis Armstrong & His Hot Five",
-        file: "assets/audio/muskrat_ramble.mp3",
+        file: "/assets/audio/muskrat_ramble.mp3",
         cover: "assets/images/vinyl-cover-3.jpg"
     }
 ];
@@ -48,13 +47,28 @@ function initPlayer() {
     loadTrack(currentTrackIndex);
 
     // Event Listeners
-    playBtn.addEventListener('click', togglePlay);
-    prevBtn.addEventListener('click', prevTrack);
-    nextBtn.addEventListener('click', nextTrack);
+    playBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        togglePlay();
+    });
+    prevBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        prevTrack();
+    });
+    nextBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        nextTrack();
+    });
     audio.addEventListener('timeupdate', updateProgress);
     audio.addEventListener('ended', nextTrack);
-    toggleBtn.addEventListener('click', togglePlayerSize);
-    progressContainer.addEventListener('click', setProgress);
+    toggleBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        togglePlayerSize();
+    });
+    progressContainer.addEventListener('click', (e) => {
+        e.stopPropagation();
+        setProgress(e);
+    });
 
     // Error handling
     audio.addEventListener('error', (e) => {
@@ -68,17 +82,25 @@ function initPlayer() {
 
     // Handle clicks on vinyl to open/close
     vinylRecord.addEventListener('click', (e) => {
-        e.stopPropagation(); // Prevent bubbling issues
-        togglePlayerSize();
+        e.stopPropagation();
+        // If we click the record while it's minimized, we expand it
+        // If it's already expanded, we toggle play/pause
+        if (playerContainer.classList.contains('minimized')) {
+            togglePlayerSize();
+        } else {
+            togglePlay();
+        }
     });
 
-    // Attempt auto-play
+    // Attempt auto-play and interaction fallback
     const playAttempt = () => {
+        if (isPlaying) return;
         audio.play().then(() => {
             vinylRecord.classList.add('spinning');
             playBtn.innerHTML = '⏸';
             isPlaying = true;
             document.removeEventListener('click', playAttempt);
+            document.removeEventListener('keydown', playAttempt);
         }).catch(err => {
             console.log("Auto-play blocked, waiting for interaction");
         });
@@ -87,8 +109,9 @@ function initPlayer() {
     // Try immediately
     playAttempt();
 
-    // Fallback: play on first click anywhere if still not playing
+    // Fallback: play on first click or keydown anywhere
     document.addEventListener('click', playAttempt);
+    document.addEventListener('keydown', playAttempt);
 }
 
 function loadTrack(index) {
