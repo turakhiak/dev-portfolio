@@ -25,7 +25,7 @@
 
   <title>Dev Turakhia | Academic Portfolio</title>
   <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=20260210">
   <link rel="stylesheet" href="endorsements.css">
   <link rel="stylesheet" href="music_player.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -197,17 +197,35 @@
   <section id="about" class="section about-section">
     <div class="container">
       <h2 class="section-title">About Me</h2>
-      <div class="about-header">
-        <h2 class="about-headline">A Study in <br>Contrasts.</h2>
-        <p class="about-bio">
-          My interests might seem like opposites. On one side, there's the quiet ritual of <strong>vinyl
-            collecting</strong>—a hobby that started when I found a stack of records under my grandfather's bed. I love
-          the crackle of an old jazz album and the patience it requires.
-          <br><br>
-          On the other side is the <strong>intensity of the court</strong>. As a national-level tennis player and sports
-          captain, I thrive on competition and quick decision-making. These two worlds—the patient observer and the
-          competitive athlete—define who I am: someone who values both rigorous preparation and decisive action.
-        </p>
+      <div class="about-grid-wrapper">
+        <div class="about-text-top">
+          <h2 class="about-headline">A Study in <br>Contrasts.</h2>
+          <p class="about-bio">
+            My interests might seem like opposites. On one side, there's the quiet ritual of <strong>vinyl
+              collecting</strong>—a hobby that started when I found a stack of records under my grandfather's bed. I
+            love
+            the crackle of an old jazz album and the patience it requires.
+          </p>
+        </div>
+
+        <div class="video-section">
+          <div class="video-container">
+            <video controls playsinline preload="auto" poster="assets/images/video-poster.jpg">
+              <source src="site_content/dev intro.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <p class="video-caption">A Study in Contrasts: From Rock Collecting to Chemical Engineering</p>
+        </div>
+
+        <div class="about-text-bottom">
+          <p class="about-bio">
+            On the other side is the <strong>intensity of the court</strong>. As a national-level tennis player and
+            sports
+            captain, I thrive on competition and quick decision-making. These two worlds—the patient observer and the
+            competitive athlete—define who I am: someone who values both rigorous preparation and decisive action.
+          </p>
+        </div>
       </div>
 
       <div class="values-grid">
@@ -389,7 +407,7 @@
           <!-- Row 2 -->
           <div class="stat-card highlight">
             <span class="stat-value">4 'a's</span>
-            <span class="stat-label">AS Level Results</span>
+            <span class="stat-label">AS Level Results (predicted)</span>
             <div class="stat-detail">Math, Physics, Chem, Bio</div>
           </div>
           <div class="stat-card">
